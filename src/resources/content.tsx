@@ -2,14 +2,15 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  firstName: "Nguyen",
+  lastName: "Danh",
+  name: `Nguyen Cong Danh`,
+  role: "Business Analyst",
+  avatar: "/images/avatar.png",
+  email: "ncdanh131104@gmail.com",
+  location: "Asia/Ho_Chi_Minh", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  locationLabel: "Ha_Noi",
+  languages: ["VietNamese", "English"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
@@ -60,9 +61,9 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Turning business requirements into clear solutions.</>,
   featured: {
-    display: true,
+    display: false,
     title: (
       <Row gap="12" vertical="center">
         <strong className="ml-4">Once UI</strong>{" "}
@@ -76,7 +77,7 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    Hi,I'm Nguyen Cong Danh, an <Text as="span" size="xl" weight="strong">Business Analyst</Text> with 1 year of experience in ERP projects. Collaborated with PMs, customers, and Dev/Test teams to elicit requirements, define business rules, and deliver functional specifications. Experienced in requirement analysis, process mapping, documentation, and UAT support.
 </>
   ),
 };
@@ -85,7 +86,7 @@ const about: About = {
   path: "/about",
   label: "About",
   title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `Meet ${person.name}, ${person.role}`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -94,7 +95,7 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -102,52 +103,29 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Business Analyst with 1 year of experience in ERP projects. Collaborated with PMs, customers, and Dev/Test teams to elicit requirements, define business rules, and deliver functional specifications. Experienced in requirement analysis, process mapping, documentation, and UAT support.
       </>
     ),
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "IRTECH JSC",
+        timeframe: "07/2025 - 30/06/2026",
+        role: "Business Analyst",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Gather and analyze business requirements from enterprise customers; prepare BRD, FRD, business workflows,
+user stories, and functional specifications.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
-        ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Broke down requirement into features, user stories and acceptance criteria to support effort estimation, sprint
+planning.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Review UI/UX, support scope clarification and UAT support before delivery.
           </>,
         ],
         images: [],
@@ -159,74 +137,106 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Thuong Mai University",
+        description: <> Bachelor of Management System Information (expected 2026). <br/> 
+        GPA: 3.3/4.0
+        </>,
+       
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Skills",
     skills: [
       {
-        title: "Figma",
+        title: "Business Analysis",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Requirement analysis, documentation, prototypes and business process modeling.</>
+        ),
+        tags: [
+          {name: "Requirements Analysis"},
+          {name: "BPMN"},
+          {name: "Use Case"},
+          {name: "Elicitation"},
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [],
+      },
+      {
+        title: "UI/ UX Design",
+        description: (
+          <>Translating business requirements into user-centric UI/UX designs using Figma, building interactive prototypes, modeling user flows, and user fourneys. </>
         ),
         tags: [
           {
             name: "Figma",
-            icon: "figma",
+            icon: "Figma",
+          },
+          {
+            name: "User Flow",
+          },
+          {
+            name: "Wireframes",
           },
         ],
         // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        title: "Next.js",
+        title: "System Design",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Modeling system behavior and data structures to support development teams, ensuring alignment between business logic and technical implementation. </>
         ),
         tags: [
           {
-            name: "JavaScript",
-            icon: "javascript",
+            name: "Database (SQL Sever)",
           },
           {
-            name: "Next.js",
-            icon: "nextjs",
+            name: "Sequence Diagram",
           },
           {
-            name: "Supabase",
-            icon: "supabase",
+            name: "UML Modeling",
           },
         ],
         // optional: leave the array empty if you don't want to display images
-        images: [
+        images: [],
+      },
+      {
+        title: "Agile/ Scrum",
+        description: (
+          <>Working in Agile/ Scrum enviroment to manage requirements, track progress and collaborate with cross-functional teams using pratical tools.</>
+        ),
+        tags: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            name: "Open Projects",
+          
           },
+          {
+            name: "Google Workspace",
+          },
+          
         ],
+        // optional: leave the array empty if you don't want to display images
+        images: [],
+      },
+      {
+        title: "Language",
+        description: (
+          <>Intermediate English proficiency with a TOEIC 620, capable of understanding and communicating at a basic level in a professional working environment. </>
+        ),
+        tags: [
+          {
+            name: "English",
+            icon: "globe",
+          },
+          {
+            name: "TOEIC",
+          },
+          
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [],
       },
     ],
   },

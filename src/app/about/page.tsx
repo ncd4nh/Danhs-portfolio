@@ -12,7 +12,7 @@ import {
   Schema,
   Row,
 } from "@once-ui-system/core";
-import { baseURL, about, person, social } from "@/resources";
+import { baseURL, about, display, person, social } from "@/resources";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
 import React from "react";
@@ -94,10 +94,6 @@ export default function About() {
             horizontal="center"
           >
             <Avatar src={person.avatar} size="xl" />
-            <Row gap="8" vertical="center">
-              <Icon onBackground="accent-weak" name="globe" />
-              {person.location}
-            </Row>
             {person.languages && person.languages.length > 0 && (
               <Row wrap gap="8">
                 {person.languages.map((language, index) => (
@@ -105,6 +101,12 @@ export default function About() {
                     {language}
                   </Tag>
                 ))}
+              </Row>
+            )}
+            {display.location && (
+              <Row gap="8" vertical="center">
+                <Icon onBackground="accent-weak" name="globe" />
+                {person.locationLabel ?? person.location}
               </Row>
             )}
           </Column>
