@@ -26,14 +26,14 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/ncd4nh",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
     link: "https://www.linkedin.com/company/once-ui/",
-    essential: true,
+    essential: false,
   },
   {
     name: "Instagram",
@@ -45,7 +45,7 @@ const social: Social = [
     name: "Threads",
     icon: "threads",
     link: "https://www.threads.com/@once_ui",
-    essential: true,
+    essential: false,
   },
   {
     name: "Email",
@@ -77,7 +77,7 @@ const home: Home = {
   },
   subline: (
     <>
-    Hi,I'm Nguyen Cong Danh, an <Text as="span" size="xl" weight="strong">Business Analyst</Text> with 1 year of experience in ERP projects. Collaborated with PMs, customers, and Dev/Test teams to elicit requirements, define business rules, and deliver functional specifications. Experienced in requirement analysis, process mapping, documentation, and UAT support.
+    Hi,I'm Nguyen Cong Danh, a <Text as="span" size="xl" weight="strong">Business Analyst</Text> with 1 year of experience in ERP projects. Collaborated with PMs, customers, and Dev/Test teams to elicit requirements, define business rules, and deliver functional specifications. Experienced in requirement analysis, process mapping, documentation, and UAT support.
 </>
   ),
 };
@@ -113,7 +113,7 @@ const about: About = {
     experiences: [
       {
         company: "IRTECH JSC",
-        timeframe: "07/2025 - 30/06/2026",
+        timeframe: "06/2025 - 06/2026",
         role: "Business Analyst",
         achievements: [
           <>
